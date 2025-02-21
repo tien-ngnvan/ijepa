@@ -12,8 +12,8 @@ import multiprocessing as mp
 import pprint
 import yaml
 
-from src.utils.distributed import init_distributed
-from src.train import main as app_main
+from ijepa.utils.distributed import init_distributed
+from ijepa.train import main as app_main
 
 parser = argparse.ArgumentParser()
 parser.add_argument(

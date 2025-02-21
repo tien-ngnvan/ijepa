@@ -29,25 +29,25 @@ import torch.multiprocessing as mp
 import torch.nn.functional as F
 from torch.nn.parallel import DistributedDataParallel
 
-from src.masks.multiblock import MaskCollator as MBMaskCollator
-from src.masks.utils import apply_masks
-from src.utils.distributed import (
+from ijepa.masks.multiblock import MaskCollator as MBMaskCollator
+from ijepa.masks.utils import apply_masks
+from ijepa.utils.distributed import (
     init_distributed,
     AllReduce
 )
-from src.utils.logging import (
+from ijepa.utils.logging import (
     CSVLogger,
     gpu_timer,
     grad_logger,
     AverageMeter)
-from src.utils.tensors import repeat_interleave_batch
-from src.datasets.imagenet1k import make_imagenet1k
+from ijepa.utils.tensors import repeat_interleave_batch
+from ijepa.datasets.imagenet1k import make_imagenet1k
 
-from src.helper import (
+from ijepa.helper import (
     load_checkpoint,
     init_model,
     init_opt)
-from src.transforms import make_transforms
+from ijepa.transforms import make_transforms
 
 # --
 log_timings = True

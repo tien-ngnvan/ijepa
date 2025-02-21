@@ -10,11 +10,11 @@ import sys
 
 import torch
 
-import src.models.vision_transformer as vit
-from src.utils.schedulers import (
+import ijepa.models.vision_transformer as vit
+from ijepa.utils.schedulers import (
     WarmupCosineSchedule,
     CosineWDSchedule)
-from src.utils.tensors import trunc_normal_
+from ijepa.utils.tensors import trunc_normal_
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger()
